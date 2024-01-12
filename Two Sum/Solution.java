@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-class Solution {
+public class Solution {
     
     /** 
      * My first solution is a basic nested for loop approach.
@@ -17,54 +17,21 @@ class Solution {
      *      O(1)
      *      The only space being taken up is the array of size 2 (solution) and two looping variables
     */
-    public int[] twoSum(int[] nums, int target) {
-        int[] solution = {-1, -1};
+    public static int[] twoSum(int[] nums, int target) {
         for(int i = 0; i < nums.length - 1; i++){
             for(int j = i + 1; j < nums.length; j++){
                 if(nums[i] + nums[j] == target){
-                    solution[0] = i;
-                    solution[1] = j;
-                    return solution;
+                    System.out.println("Solution: " + i + ", " + j);
+                    return new int[] {i,j};
                 }
             }
         }
-        return solution;
+        return new int[] {-1,-1};
     }
 
-    /** 
-     * My second solution is a sort approach.
-     * I first sort the array of nums, then create two "pointers" (x and y) that start at the beginning and end of the array respectively.
-     * I then begin comparing the values in a loop: 
-     *      if nums[x] + nums[y] > target, I decrement y.
-     *      if nums[x] + nums[y] < target, I increment x.
-     *      if nums[x] + nums[y] == target, return {x,y}
-     * Eventually, since there exists some solution, I will find the solution this way.
-     * 
-     * Complexity
-     * - Time complexity:
-     *      O(n + nlog(n))
-     *      The time comes from sorting the array, then looping through each value. Sorting takes much longer, so we can say the time complexity is:
-     *      O(nlog(n))
-     * - Space complexity:
-     *      O(2)
-     *      The only space being taken up is by x, y, and "solution".
-    */
-    public int[] twoSum2(int[] nums, int target) {
-        int x = 0, y = nums.length - 1;
-        Arrays.sort(nums);
-        while((nums[x] + nums[y]) != target){
-            if((nums[x] + nums[y]) < target){
-                x++;
-            } else {
-                y--;
-            }
-        }
-        int[] solution = {x,y};
-        return solution;
-    }
 
     /** 
-     * My third solution is a dynamic approach via a HashMap.
+     * My second solution is a dynamic approach via a HashMap.
      * The idea is that for any number X we find in the array, there is some value Y such that X + Y = target.
      * But, since we know there is exactly one solution, we can also conclude there exists only one X that has a corresponding Y in the array.
      * 
@@ -80,19 +47,22 @@ class Solution {
      *      O(n)
      *      In the worst case, the Y-value is the last value in the array, in which case we store n values in the HashMap.
     */
-    public int[] twoSum3(int[] nums, int target) {
+    public static int[] twoSum2(int[] nums, int target) {
         HashMap<Integer, Integer> yValues = new HashMap<Integer,Integer>();
-        int[] solution = {-1,-1};
-        for(int i = 0; i < nums.length - 1; i++){
-            int y = target - nums[i];
-            if(yValues.containsKey(y)){
-                solution[0] = yValues.get(y);
-                solution[1] = i;
-                return solution;
-            } else {
-                yValues.put(y, i);
+        for(int i = 0; i < nums.length; i++){
+            if(yValues.containsKey(nums[i])){
+                System.out.println("Solution: " + yValues.get(nums[i]) + ", " + i);
+                return new int[] {yValues.get(nums[i]), i};
             }
+            yValues.put(target - nums[i], i);
         }
-        return solution;
+        return new int[] {-1,-1};
+    }
+
+    public static void main(String args[]){
+        int[] nums = {9,8,7,6,5,4,3,2,1};
+        int target = 3;
+        twoSum(nums, target);
+        twoSum2(nums, target);
     }
 }
