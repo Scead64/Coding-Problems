@@ -1,1 +1,9 @@
 This repository contains problems to coding challenges and my proposed solutions.
+
+Within each folder: 
+    "Problem" contains the description of the problem,
+    "Solution" contains my solutions and reasonings
+    "Tester" contains the junit used to test my code
+
+I will not be accepting collaborative changes as this is my personal learning,
+but feel free to open issues on code you think is incorrect or could be improved.
