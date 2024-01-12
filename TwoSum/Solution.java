@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package TwoSum;
+
 import java.util.HashMap;
 
 public class Solution {
