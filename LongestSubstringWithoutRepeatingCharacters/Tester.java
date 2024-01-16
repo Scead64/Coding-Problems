@@ -17,9 +17,23 @@ public class Tester {
     }
 
     @Test
+    void testNoCharacters() {
+        String s = "";
+        int expectedSolution = 0;
+        assertEquals(expectedSolution, Solution.lengthOfLongestSubstring(s));
+    }
+
+    @Test
     void testStringOfRepeatCharacters() {
         String s = "aaaaaaaaaaaaaaaaaaaa";
         int expectedSolution = 1;
+        assertEquals(expectedSolution, Solution.lengthOfLongestSubstring(s));
+    }
+
+    @Test
+    void testStringOfRepeatLongest() {
+        String s = "aaaaabaaaabaaaaabaaa";
+        int expectedSolution = 2;
         assertEquals(expectedSolution, Solution.lengthOfLongestSubstring(s));
     }
 
