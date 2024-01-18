@@ -82,7 +82,7 @@ public class Solution {
 
 
     public static void main(String args[]){
-        String test = "aaaaaba";
+        String test = "RDDRD";
         System.out.println(predictPartyVictory(test));
     }
 }
