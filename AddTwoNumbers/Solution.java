@@ -1,5 +1,7 @@
 package AddTwoNumbers;
 
+import HELPER_CLASSES.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {

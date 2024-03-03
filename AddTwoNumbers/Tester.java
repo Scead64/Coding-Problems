@@ -3,6 +3,8 @@ package AddTwoNumbers;
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 
+import HELPER_CLASSES.ListNode;
+
 public class Tester {
 
     
