@@ -1,4 +1,4 @@
-package DifferenceOfTwoArrays;
+package FindTheDifferenceOfTwoArrays;
 
 import static org.junit.Assert.assertEquals;
 
