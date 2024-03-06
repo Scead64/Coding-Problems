@@ -36,14 +36,14 @@ public class TreeNode{
      *      The root treenode of the tree constructable from 
      * 
     */ 
-    public static TreeNode constructTree(int[] tree, int index){
+    public static TreeNode constructTree(Integer[] tree, int index){
         TreeNode root = new TreeNode(tree[index]), left, right;
         int leftIndex = index*2+1, rightIndex = leftIndex+1;
-        if(leftIndex < tree.length && tree[leftIndex] != 0){
+        if(leftIndex < tree.length && tree[leftIndex] != null){
             left = constructTree(tree, leftIndex);
             root.left = left;
         }
-        if(rightIndex < tree.length && tree[rightIndex] != 0){
+        if(rightIndex < tree.length && tree[rightIndex] != null){
             right = constructTree(tree, rightIndex);
             root.right = right;
         }

@@ -20,21 +20,21 @@ public class Tester {
 
     @Test
     void singlePathTree() {
-        TreeNode root = TreeNode.constructTree(new int[]{1,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1}, 0);
+        TreeNode root = TreeNode.constructTree(new Integer[]{1,1,null,1,null,null,null,1,null,null,null,null,null,null,null,1}, 0);
         int expectedsolution = 4;
         assertEquals(expectedsolution, Solution.diameterOfBinaryTree(root));
     }
 
     @Test
     void TwoPathTree() {
-        TreeNode root = TreeNode.constructTree(new int[]{1,1,1,1,0,0,1,1,0,0,0,0,0,0,1,1}, 0);
+        TreeNode root = TreeNode.constructTree(new Integer[]{1,1,1,1,null,null,1,1,null,null,null,null,null,null,1,1}, 0);
         int expectedsolution = 7;
         assertEquals(expectedsolution, Solution.diameterOfBinaryTree(root));
     }
 
     @Test
     void TwoBranchPathTree() {
-        TreeNode root = TreeNode.constructTree(new int[]{1,1,0,1,1,0,0,1,0,1,0,0,0,0,0,1,0,1,0}, 0);
+        TreeNode root = TreeNode.constructTree(new Integer[]{1,1,null,1,1,null,null,1,null,1,null,null,null,null,null,1,null,1,null}, 0);
         int expectedsolution = 5;
         assertEquals(expectedsolution, Solution.diameterOfBinaryTree(root));
     }
