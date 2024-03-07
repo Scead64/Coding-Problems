@@ -10,7 +10,7 @@ public class Solution {
      * One important property of the problem is the nature of the number of subsequences between two numbers in the array.
      * If we have an array [1,2,3,4,5] and target 5, the viable subsequences would be between 1-4, 1-3, 1-2, 1-1, 2-3, 2-2.
      * In the case of 1-1 and 2-2, there is only one subsequence: {1} and {2}.
-     * In the case of 1-2 and 2-3, there are also only one subsequence: {1,2} and {2,3}
+     * In the case of 1-2 and 2-3, there is also only one subsequence: {1,2} and {2,3}
      * In the case of 1-3, there are two subsequences: {1,2,3} and {1,3}
      * And lastly, in the case of 1-4, there are four: {1,2,3,4}, {1,2,4}, {1,3,4}, {1,4}
      * 
