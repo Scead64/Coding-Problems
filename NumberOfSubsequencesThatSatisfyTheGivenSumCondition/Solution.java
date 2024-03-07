@@ -25,7 +25,7 @@ public class Solution {
      * This is very similar to binary numbers, which have the interesting property that, for a given index, a 1 corresponds to the value of everything below it + 1.
      * So, we can more easily calculate the number of subsequences in this case, by calculating 2 to the power of the size of the array (max index + 1), subtracted by 1, which is in the case 31.
      * 
-     * NOTE: This requires sorting the array first so that values can be accurately parsed.
+     * NOTE: This requires sorting the array fir st so that values can be accurately parsed.
      * 
      *** SOLUTION *** 
 
