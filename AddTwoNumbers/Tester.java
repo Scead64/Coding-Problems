@@ -13,9 +13,9 @@ public class Tester {
      */
     @Test
     void multiDigitAdd() {
-        ListNode node1 = ListNode.constructNum("354");
-        ListNode node2 = ListNode.constructNum("521");
-        ListNode expectedsolution = ListNode.constructNum("875");
+        ListNode node1 = ListNode.constructListByNum("354");
+        ListNode node2 = ListNode.constructListByNum("521");
+        ListNode expectedsolution = ListNode.constructListByNum("875");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -26,9 +26,9 @@ public class Tester {
 
     @Test
     void multiDigitAddCarries() {
-        ListNode node1 = ListNode.constructNum("354");
-        ListNode node2 = ListNode.constructNum("870");
-        ListNode expectedsolution = ListNode.constructNum("1224");
+        ListNode node1 = ListNode.constructListByNum("354");
+        ListNode node2 = ListNode.constructListByNum("870");
+        ListNode expectedsolution = ListNode.constructListByNum("1224");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -39,9 +39,9 @@ public class Tester {
 
     @Test
     void testSingleDigitAdd() {
-        ListNode node1 = ListNode.constructNum("3");
-        ListNode node2 = ListNode.constructNum("5");
-        ListNode expectedsolution = ListNode.constructNum("8");
+        ListNode node1 = ListNode.constructListByNum("3");
+        ListNode node2 = ListNode.constructListByNum("5");
+        ListNode expectedsolution = ListNode.constructListByNum("8");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -52,9 +52,9 @@ public class Tester {
 
     @Test
     void testSingleDigitAddCarry() {
-        ListNode node1 = ListNode.constructNum("3");
-        ListNode node2 = ListNode.constructNum("8");
-        ListNode expectedsolution = ListNode.constructNum("11");
+        ListNode node1 = ListNode.constructListByNum("3");
+        ListNode node2 = ListNode.constructListByNum("8");
+        ListNode expectedsolution = ListNode.constructListByNum("11");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -65,9 +65,9 @@ public class Tester {
 
     @Test
     void testBothZeroAdd() {
-        ListNode node1 = ListNode.constructNum("0");
-        ListNode node2 = ListNode.constructNum("0");
-        ListNode expectedsolution = ListNode.constructNum("0");
+        ListNode node1 = ListNode.constructListByNum("0");
+        ListNode node2 = ListNode.constructListByNum("0");
+        ListNode expectedsolution = ListNode.constructListByNum("0");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -78,9 +78,9 @@ public class Tester {
 
     @Test
     void testOneZeroAdd() {
-        ListNode node1 = ListNode.constructNum("0");
-        ListNode node2 = ListNode.constructNum("1111");
-        ListNode expectedsolution = ListNode.constructNum("1111");
+        ListNode node1 = ListNode.constructListByNum("0");
+        ListNode node2 = ListNode.constructListByNum("1111");
+        ListNode expectedsolution = ListNode.constructListByNum("1111");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -91,9 +91,9 @@ public class Tester {
 
     @Test
     void testVariedLengthAdd() {
-        ListNode node1 = ListNode.constructNum("12");
-        ListNode node2 = ListNode.constructNum("1111");
-        ListNode expectedsolution = ListNode.constructNum("1123");
+        ListNode node1 = ListNode.constructListByNum("12");
+        ListNode node2 = ListNode.constructListByNum("1111");
+        ListNode expectedsolution = ListNode.constructListByNum("1123");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);
@@ -104,9 +104,9 @@ public class Tester {
 
     @Test
     void testVariedLengthAddCarry() {
-        ListNode node1 = ListNode.constructNum("5432");
-        ListNode node2 = ListNode.constructNum("6889");
-        ListNode expectedsolution = ListNode.constructNum("12321");
+        ListNode node1 = ListNode.constructListByNum("5432");
+        ListNode node2 = ListNode.constructListByNum("6889");
+        ListNode expectedsolution = ListNode.constructListByNum("12321");
         ListNode solution = Solution.addTwoNumbers(node1, node2);
         while((expectedsolution != null) || (solution != null)){
             assertEquals(expectedsolution.val, solution.val);

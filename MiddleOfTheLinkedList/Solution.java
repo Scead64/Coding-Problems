@@ -42,7 +42,7 @@ public class Solution {
     
 
     public static void main(String args[]){
-        ListNode node = ListNode.constructNum("354");
+        ListNode node = ListNode.constructListByNum("354");
         System.out.print(middleNode(node).val);
     }
 }

@@ -14,21 +14,21 @@ public class Tester {
     
     @Test
     void singleNode() {
-        ListNode node = ListNode.constructNum("3");
+        ListNode node = ListNode.constructListByNum("3");
         ListNode expectedsolution = node;
         assertEquals(expectedsolution, Solution.middleNode(node));
     }
 
     @Test
     void twoNodes() {
-        ListNode node = ListNode.constructNum("35");
+        ListNode node = ListNode.constructListByNum("35");
         ListNode expectedsolution = node.next;
         assertEquals(expectedsolution, Solution.middleNode(node));
     }
 
     @Test
     void threeNodes() {
-        ListNode node = ListNode.constructNum("354");
+        ListNode node = ListNode.constructListByNum("354");
         ListNode expectedsolution = node.next;
         assertEquals(expectedsolution, Solution.middleNode(node));
     }

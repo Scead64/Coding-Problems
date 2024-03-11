@@ -16,8 +16,8 @@ public class ListNode{
         this.next = ln;
     }
 
-    // This method is for testing purposes and is not meant to be used in solution
-    public static ListNode constructNum(String num){
+    // These methods are for testing purposes and is not meant to be used in solution
+    public static ListNode constructListByNum(String num){
         ListNode start = new ListNode();
         ListNode current = start, end = start;
 
@@ -32,5 +32,22 @@ public class ListNode{
         }
         end.next = null;
         return start;
+    }
+
+    public static ListNode constructListOrder(int length, int[] orders, int[] values){
+        ListNode[] nodes = new ListNode[length];
+        for(int i = 0; i < length; i++){
+            nodes[i] = new ListNode(values[i]);
+        }
+
+        for(int j = 0; j < length; j++){
+            if(orders[j] == -1){
+                nodes[j].next = null;
+            } else {
+                nodes[j].next = nodes[orders[j]];
+            }
+        }
+        
+        return nodes[0];
     }
 }

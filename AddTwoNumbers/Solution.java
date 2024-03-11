@@ -81,8 +81,8 @@ public class Solution {
     }
 
     public static void main(String args[]){
-        ListNode node534 = ListNode.constructNum("354");
-        ListNode node870 = ListNode.constructNum("870");
+        ListNode node534 = ListNode.constructListByNum("354");
+        ListNode node870 = ListNode.constructListByNum("870");
         ListNode solution = addTwoNumbers(node534, node870);
         while((solution != null)){
             System.out.println(solution.val + " ");
